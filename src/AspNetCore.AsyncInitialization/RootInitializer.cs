@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,12 +6,12 @@ using Microsoft.Extensions.Logging;
 
 namespace AspNetCore.AsyncInitialization
 {
-    internal class AsyncInitializer
+    internal class RootInitializer
     {
-        private readonly ILogger<AsyncInitializer> _logger;
+        private readonly ILogger<RootInitializer> _logger;
         private readonly IEnumerable<IOrderedAsyncInitializer> _initializers;
 
-        public AsyncInitializer(ILogger<AsyncInitializer> logger, IEnumerable<IOrderedAsyncInitializer> initializers)
+        public RootInitializer(ILogger<RootInitializer> logger, IEnumerable<IOrderedAsyncInitializer> initializers)
         {
             _logger = logger;
             _initializers = initializers;
